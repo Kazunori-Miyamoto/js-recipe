@@ -2,17 +2,39 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>ElementSample</title>
+    <title>Document</title>
   </head>
   <body>
-    <div id="cards-container">
-      <div id="primary-card">こんばんは</div>
+    <h1>この画像はなんでしょう？</h1>
+    <img
+      src="https://static.retrip.jp/spot/7166fb8e-bb12-44db-b018-44b1019821ff/images/73359b8d-dbb3-4fa3-8334-5f3836ee7c77_m.jpg"
+      alt=""
+    />
+    <div>
+      <button id="button-1">柴犬</button>
+      <button id="button-2">秋田犬</button>
+      <button id="button-3">紀州犬</button>
     </div>
-
+    <div id="display">ここに答えが表示される</div>
     <script>
-      // JavaScript
+      const display = document.getElementById("display")
+      const button1 = document.getElementById("button-1")
+
+      button1.onclick = function() {
+        display.textContent = "正解！！"
+        2
+      }
+      const button2 = document.getElementById("button-2")
+      button2.onclick = function() {
+        display.textContent = "おしい！！"
+        3
+      }
+      const button3 = document.getElementById("button-3")
+      button3.onclick = function() {
+        display.textContent = "はずれ！！"
+      }
     </script>
   </body>
 </html>
