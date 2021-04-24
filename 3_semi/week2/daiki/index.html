@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <h1>メモアプリ</h1>
+
+  <body>
+    <div>
+      <input type="text" id="input" />
+      <button id="add-button">追加</button>
+    </div>
+    <div id="memo-container"></div>
+
+    <script>
+      const input = document.getElementById("memo-input")
+      const button = document.getElementById("add-button")
+      const container = document.getElementById("memo-container")
+
+      button.onclick = function() {
+        console.log(input.value)
+
+        card = document.createElement("div")
+        card.textContent = input.value
+
+        container.append(card)
+      }
+    </script>
+  </body>
+</html>
