@@ -7,34 +7,27 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>この画像はなんでしょう？</h1>
-    <img
-      src="https://static.retrip.jp/spot/7166fb8e-bb12-44db-b018-44b1019821ff/images/73359b8d-dbb3-4fa3-8334-5f3836ee7c77_m.jpg"
-      alt=""
-    />
-    <div>
-      <button id="button-1">柴犬</button>
-      <button id="button-2">秋田犬</button>
-      <button id="button-3">紀州犬</button>
-    </div>
-    <div id="display">ここに答えが表示される</div>
     <script>
-      const display = document.getElementById("display")
-      const button1 = document.getElementById("button-1")
+     
 
-      button1.onclick = function() {
-        display.textContent = "正解！！"
-        2
+      const kaz = {
+        name: "かず",
+        uni:"名城大学",
+        age: 20,
+        like:["柴犬","歌うこと"],
+        sayHello: function(){
+          console.log(`${kaz.name}です。よろしく！`)
+        },
+        family:{
+          papa:"嘉彦"
+          mama:"ゆう子"
+          dog:"シゲ"
+        },
+        isMentor:false
       }
-      const button2 = document.getElementById("button-2")
-      button2.onclick = function() {
-        display.textContent = "おしい！！"
-        3
-      }
-      const button3 = document.getElementById("button-3")
-      button3.onclick = function() {
-        display.textContent = "はずれ！！"
-      }
+
+      console.log(kaz)
+      console.log("kaz.name", kaz.name)
     </script>
   </body>
 </html>
